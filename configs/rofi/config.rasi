@@ -1,0 +1,13 @@
+//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+
+//@theme "/usr/share/rofi/themes/docu.rasi"
+
+//@theme "/usr/share/rofi/themes/android_notification.rasi"
+
+//@theme "/usr/share/rofi/themes/test.rasi"
+
+//@theme "~/.config/rofi/themes/test2.rasi"
+
+//@theme "/home/vic/.config/rofi/themes/test3.rasi"
+
+@theme "/home/vic/.config/rofi/themes/new.rasi"

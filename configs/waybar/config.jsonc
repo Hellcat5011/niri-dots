@@ -1,0 +1,137 @@
+{
+  "reload_style_on_change": true,
+	"layer": "top",
+	"position": "top",
+	"mode": "dock",
+    	"exclusive": true,
+    	"passthrough": false,
+    	"gtk-layer-shell": true,
+    	"height": 30,
+      "fixed-center": true,
+	
+	"modules-left": [
+		"niri/workspaces"
+	],
+	
+	"modules-center": [
+    "niri/window",
+		"clock",
+    "custom/notify"
+	],
+
+	"modules-right": [
+    "group/tray-expand",
+    "bluetooth",
+		"custom/brightness",
+		"wireplumber",
+    "network"
+	],
+
+	"niri/workspaces": {
+		"format": "",
+    "persistent-workspaces": {
+      "*": 5
+	}
+	},
+
+  "niri/window": {
+    "format": "{}",
+    "icon": true,
+    "icon-size": 16,
+    "max-length": 10,
+    "rewrite": {
+      "(.*) — Zen Browser": "󰈈 $1",
+      "(.*) Private Browsing": "󰈉 $1"
+    }
+  },
+
+  "clock": {
+    "format": "{:%I:%M}",
+    "format-alt": "{:%I:%M}",
+    "tooltip-format": "{:%H:%M / %I:%M %p}" 
+  },
+
+  "custom/notify": {
+    "tooltip": true,
+    "format": "{icon}{0}",
+    "format-icons": {
+        "notification": " <span foreground='red'><small><sup>⬤</sup></small></span>",
+        "none": " ",
+        "dnd-notification": " <span foreground='red'><small><sup>⬤</sup></small></span>",
+        "dnd-none": " "
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "sleep 0.1 && swaync-client -d -sw"
+  },
+
+  "group/tray-expand": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "tray-group-item"
+    },
+    "modules": ["custom/expand-icon", "tray"]
+  },
+
+  "custom/expand-icon": {
+    "format": "",
+    "tooltip": false,
+    "on-scroll-up": "",
+    "on-scroll-down": "",
+    "on-scroll-left": "",
+    "on-scroll-right": ""
+  },
+
+  "tray": {
+    "icon-size": 20,
+    "spacing": 17
+  },
+
+  "custom/brightness": {
+    "format": "{icon} {percentage}%",
+    "format-icons": ["", "", "", " ", " "],
+    "exec": "bash -c 'v=$(ddcutil --bus 7 getvcp 10 | grep -oP \"current value =\\s*\\K[0-9]+\"); echo \"{\\\"percentage\\\": ${v:-0}}\"'",
+    "return-type": "json",
+    "interval": 1,
+    "tooltip-format": "󱕒  Inc/Dec",
+    "on-scroll-up": "$HOME/.config/hypr/user/scripts/brightness.sh --inc",
+    "on-scroll-down": "$HOME/.config/hypr/user/scripts/brightness.sh --dec",
+    "smooth-scrolling-threshold": 1
+  },
+
+  "wireplumber": {
+    "tooltip": true,
+    "tooltip-format": "󱕒 Vol | 󰳽 Settings",
+    "format": "{icon} {volume}%",
+    "format-muted": "  Mute",
+    "format-icons": [ "", "", " "],
+    "on-click": "pavucontrol",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 5%+ && wpctl get-volume @DEFAULT_SINK@ | awk '{print $2 * 100}' > /mnt/hdd/.wobpipe",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 5%- && wpctl get-volume @DEFAULT_SINK@ | awk '{print $2 * 100}' > /mnt/hdd/.wobpipe",
+    "on-click-right": "wpctl set-mute @DEFAULT_SINK@ toggle",
+    "smooth-scrolling-threshold": 1
+  },
+
+	"bluetooth": {
+    "format-on": "󰂯 On",
+    "format-disabled": "󰂲 Off",
+    "format-connected": "󰂱 {device_alias}",
+		"on-click": "blueman-manager",
+    "tooltip-format": "󰳽 click for more",
+    "tooltip-format-connected": "{device_alias} | 󰥉 {device_battery_percentage}%"
+	},
+
+  "network": {
+    "tooltip": true,
+    "tooltip-format": "Network Settings",
+    "on-click": "nm-connection-editor",
+    "format-ethernet": "󰱓 {bandwidthTotalBytes}",
+    "interval": 1,
+    "format-wifi": "󰤨 {essid}",
+    "format-disconnected": "󰯡 Disconnected"
+  },
+
+}

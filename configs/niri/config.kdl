@@ -1,0 +1,15 @@
+// This config is in the KDL format: https://kdl.dev
+// "/-" comments out the following node.
+// Check the wiki for a full description of the configuration:
+// https://yalter.github.io/niri/Configuration:-Introduction
+
+include "./user/startup.kdl"
+include "./user/monitors.kdl"
+include "./user/input.kdl"
+include "./user/keys.kdl"
+include "./user/decorations.kdl"
+include "./user/animations.kdl"
+
+
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"

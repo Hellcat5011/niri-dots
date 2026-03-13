@@ -1,0 +1,10 @@
+
+[font]
+normal = { family = "CaskaydiaCove Nerd Font Mono", style = "regular" }
+size = 16
+
+[general]
+import = [ "colors.toml" ]
+
+[cursor]
+style = "Underline"

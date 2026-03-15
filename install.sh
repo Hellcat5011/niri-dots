@@ -23,10 +23,6 @@ disown
 
 matugen image $HOME/.config/niri/user/scripts/.wallpaper_current -m "dark" -t "scheme-tonal-spot"  --source-color-index "0"
 
-nerdfonts-installer-bin
-
-sleep 2
-
 sudo cp ./sddm.conf /etc/sddm.conf
 
 sleep 2

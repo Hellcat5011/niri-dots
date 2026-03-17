@@ -1,0 +1,123 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: MartianMono Nerd Font, Dejavu Sans, AdwaitaMono Nerd Font;
+    font-size: 15px;
+    color: @on_primary_container;
+    min-height: 10px;
+    }
+
+  @import 'colors.css';
+
+window#waybar {
+    background: transparent;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+
+tooltip {
+  background: rgba(34, 37, 41, 0.5);
+  border: 1px solid @tertiary_fixed_dim;
+  border-radius: 10px;
+}
+tooltip label {
+  color: white;
+}
+
+
+
+/***** LEFT MODULES *****/
+
+#workspaces.horizontal.module {
+  background: @primary_container;
+  border-radius: 30px 30px 30px 30px;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: 2px solid @tertiary;
+}
+
+
+#workspaces.horizontal.module button {
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    background: transparent;
+    color: @secondary;
+    font-size: 25px;
+}
+
+#workspaces.horizontal.module button:hover {
+    background: alpha(@secondary, 0.5);
+    font-size: 25px;
+    border-radius: 7px;
+}
+
+#workspaces button.active {
+    background: @on_tertiary_container;
+}
+
+
+/***** CENTER MODULES *****/
+
+.modules-center {
+  padding: 0px;
+  background: @primary_container;
+  border-radius: 10px;
+  border: 2px solid @tertiary_fixed_dim;
+  color: @color1;
+}
+
+
+#clock.module {
+  padding: 5px 10px;
+  background: transparent;
+  font-size: 20px;
+}
+
+#custom-notify.module {
+  padding: 5px 10px;
+  background: transparent;
+  font-size:20px;
+}
+
+#custom-notify.module:hover {
+  background: @secondary;
+  color: @on_secondary;
+  font-size: 25px;
+  border-radius: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+
+/***** MODULES RIGHT *****/
+
+.modules-right {
+  background: @primary_container;
+  border-radius: 10px 0px 0px 10px;
+  border: 2px solid @tertiary_fixed_dim;
+}
+
+
+#network.module, #bluetooth.module, #wireplumber.module, #custom-brightness {
+    padding: 5px 15px 5px 10px;
+    font-size: 20;
+}
+
+#custom-brightness:hover {
+    background: @secondary;
+    color: @on_secondary;
+    border-radius: 10px;
+    font-size: 25px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#network.module:hover, #wireplumber.module:hover, #bluetooth:hover {
+  background: @secondary;
+  color: @on_secondary;
+  border-radius: 10px;
+  font-size: 25px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}

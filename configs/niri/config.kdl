@@ -13,3 +13,7 @@ include "./user/animations.kdl"
 
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+debug {
+	disable-cursor-plane
+}

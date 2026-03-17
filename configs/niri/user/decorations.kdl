@@ -3,8 +3,8 @@ layout {
     gaps 6
 
     focus-ring {
-        active-color "#ffb2b8"
-        inactive-color "#9f8c8d"
+        active-color "#a3d397"
+        inactive-color "#8c9387"
         urgent-color   "#ffb4ab"
     }
 
@@ -12,24 +12,23 @@ layout {
 
 
     border {
-        active-color   "#ffb2b8"
-        inactive-color "#9f8c8d"
+        active-color   "#a3d397"
+        inactive-color "#8c9387"
         urgent-color   "#ffb4ab"
     }
 
     shadow {
-	on
         color "#00000070"
     }
 
     tab-indicator {
-        active-color   "#ffb2b8"
-        inactive-color "#9f8c8d"
+        active-color   "#a3d397"
+        inactive-color "#8c9387"
         urgent-color   "#ffb4ab"
     }
 
     insert-hint {
-        color "#ffb2b880"
+        color "#a3d39780"
     }
 
     preset-column-widths {

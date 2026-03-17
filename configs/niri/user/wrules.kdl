@@ -6,32 +6,46 @@ window-rule {
     default-column-width {}
 }
 
-// Open the Firefox picture-in-picture player as floating by default.
 window-rule {
-    // This app-id regular expression will work for both:
-    // - host Firefox (app-id is "firefox")
-    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id=r#"zen$"# title="^Picture-in-Picture$"
     open-floating true
 }
 
 
-// Example: block out two password managers from screen capture.
-// (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+window-rule {
+	match {}
+	opacity 0.8
 
-    block-out-from "screen-capture"
-
-    // Use this instead if you want them visible on third-party screenshot tools.
-    // block-out-from "screencast"
+	background-effect {
+		blur true
+	}
 }
 
-// Example: enable rounded corners for all windows.
+window-rule {
+	match app-id=r#"^Alacritty$"#
+	opacity 0.8
+
+	background-effect {
+		blur true
+	}
+}
+
+window-rule {
+	match app-id=r#"^Alacritty$"# title="^sddm$"
+
+	open-floating true
+	opacity 0.8
+
+	background-effect {
+		blur true
+	}
+}
+
 // (This example rule is commented out with a "/-" in front.)
 window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
+    draw-border-with-background false
 }
+
 

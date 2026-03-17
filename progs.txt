@@ -3,7 +3,6 @@ amd-ucode
 ani-cli
 ani-skip-git
 ark
-base
 blanket
 blueman
 blueprint-compiler
@@ -13,7 +12,6 @@ cava
 cmake
 cups
 dunst
-efibootmgr
 eza
 fastfetch
 flatpak
@@ -32,7 +30,7 @@ neovim
 nerdfonts-installer-bin
 networkmanager
 network-manager-applet
-niri
+niri-wip-git
 nvidia-open-dkms
 nwg-look
 okular
@@ -52,8 +50,8 @@ sddm
 sddm-sugar-candy-git
 snapper
 swayidle
-swaybg
 swaync
+swww
 system-config-printer
 ufw
 wireless_tools

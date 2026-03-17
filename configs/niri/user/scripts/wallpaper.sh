@@ -7,10 +7,9 @@ scripts="$HOME/.config/niri/user/scripts/"
 
 # swww config
 BEZIER=".43,1.19,1,.4"
-#SWWW_PARAMS="--transition-fps 60 --transition-type any --transition-duration 2 --transition-bezier $BEZIER"
+SWWW_PARAMS="--transition-fps 60 --transition-type any --transition-duration 2 --transition-bezier $BEZIER"
 
 rofi_theme="~/.config/rofi/wallpaper.rasi"
-#focused_monitor=$(hyprctl monitors -j | jq -r '.[] | select(.focused) | .name')
 
 # Monitor details
 scale_factor=$(niri msg outputs | grep "Scale:" | awk '{print $2}')
@@ -41,19 +40,13 @@ menu() {
 
 apply_wallpaper() {
   local image_path="$1"
-
-  swaybg -i "$image_path" & 
-  disown
+  swww img "$image_path" $SWWW_PARAMS
   matugen image "$image_path" -m "dark" -t "scheme-tonal-spot" --source-color-index "0"
-  sleep 2
-  #  "$scripts/refresh.sh"
-  #  "$scripts/alpha.sh"
-  #ln -sf "$image_path" "$scripts/.wallpaper_current"
   cp "$image_path" "$scripts/.wallpaper_current"
+  sleep 2
   killall swaync && swaync &
   disown
-  $scripts/wob.sh
-
+  alacritty --title sddm -e bash -c "$scripts/sddm.sh"
 }
 
 # main

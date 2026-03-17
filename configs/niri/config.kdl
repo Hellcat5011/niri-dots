@@ -9,6 +9,7 @@ include "./user/input.kdl"
 include "./user/keys.kdl"
 include "./user/decorations.kdl"
 include "./user/animations.kdl"
+include "./user/wrules.kdl"
 
 
 

@@ -49,4 +49,9 @@ layout {
 prefer-no-csd
 
 
+overview {
+
+	backdrop-color "{{colors.primary_container.default.hex}}80"
+
+}
 

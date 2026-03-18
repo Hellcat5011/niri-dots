@@ -3,7 +3,6 @@ amd-ucode
 ani-cli
 ani-skip-git
 ark
-blanket
 blueman
 blueprint-compiler
 bluez-utils
@@ -18,6 +17,8 @@ flatpak
 font-manager
 gnome-calculator
 htop
+hypridle
+hyprlock
 kate
 lib32-rust-libs
 libva-nvidia-driver
@@ -49,13 +50,13 @@ scdoc
 sddm
 sddm-sugar-candy-git
 snapper
-swayidle
 swaync
 swww
 system-config-printer
 ufw
 wireless_tools
 wlogout
+wlsunset
 xorg-xinit
 xorg-xwayland
 xwayland-satellite

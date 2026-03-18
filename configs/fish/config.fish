@@ -17,7 +17,7 @@ abbr ll 'eza -al --icons --color=always'
 #abbr la 'eza -al --icons --color=always'
 
 #hyprland-specific
-abbr hyp 'cd ~/.config/hypr'
-abbr usr 'cd ~/.config/hypr/user/'
+abbr nir 'cd ~/.config/niri'
+abbr usr 'cd ~/.config/niri/user/'
 abbr way 'cd ~/.config/waybar/'
 abbr rof 'cd ~/.config/rofi/themes/'

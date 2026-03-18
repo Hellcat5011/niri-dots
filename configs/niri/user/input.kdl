@@ -22,3 +22,7 @@ input {
 focus-follows-mouse max-scroll-amount="0%"
 }
 
+cursor {
+	xcursor-theme "Moga-Red"
+	xcursor-size 36
+}

@@ -18,9 +18,11 @@ binds {
     Mod+Space hotkey-overlay-title="Run an Application: Rofi" { spawn-sh "pkill rofi || rofi -show drun"; }
     Mod+B hotkey-overlay-title="Open browser: Zen" { spawn "zen-browser"; }
     Mod+E hotkey-overlay-title="Open file browser: Nautilus" { spawn-sh "nautilus -w"; }
-    Ctrl+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn-sh "swaylock -i $HOME/.config/niri/user/scripts/.wallpaper_current"; }
+    Ctrl+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
     Ctrl+Alt+Delete hotkey-overlay-title="Logoff: Wlogout" { spawn-sh "wlogout -b 4"; }
     Mod+W hotkey-overlay-title="Set wallpaper: Selector" { spawn-sh "$HOME/.config/niri/user/scripts/wallpaper.sh"; }
+
+    Mod+A hotkey-overlay-title="Show notifications: swaync" { spawn-sh "swaync-client -t"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -193,7 +195,7 @@ binds {
     // Mod+Ctrl+1 { move-window-to-workspace 1; }
 
     // Switches focus between the current and the previous workspace.
-    // Mod+Tab { focus-workspace-previous; }
+    Mod+Tab { focus-workspace-previous; }
 
     // The following binds move the focused window in and out of a column.
     // If the window is alone, they will consume it into the nearby column to the side.
@@ -245,14 +247,14 @@ binds {
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
     // rather than stacked on top of each other.
-    //Mod+W { toggle-column-tabbed-display; }
+    // Mod+Ctrl+W { toggle-column-tabbed-display; }
 
     // Actions to switch layouts.
     // Note: if you uncomment these, make sure you do NOT have
     // a matching layout switch hotkey configured in xkb options above.
     // Having both at once on the same hotkey will break the switching,
     // since it will switch twice upon pressing the hotkey (once by xkb, once by niri).
-    // Mod+Space       { switch-layout "next"; }
+    // Mod+Ctrl+Space { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
     Print { screenshot; }

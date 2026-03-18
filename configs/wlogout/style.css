@@ -8,30 +8,30 @@
 
 window {
 	font-size: 24px;
-	background-color: alpha(@background,0.4);
+	background-color: alpha(@background,0.8);
 }
 
 button {
 	margin: 0px;
     	border-radius: 0px;
-    	border-color: black;
 	background-color: alpha(@on_primary_container, 0.6);
 	border-style: none;
 	border-width: 0px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 30%;
+	min-height: 200px;
 	animation: gradient_f 20s ease-in infinite;
 }
 
 button:focus{
-	background-color: alpha(@secondary, 0.3);
+	background-color: alpha(@tertiary, 0.6);
 	outline-style: none;
 	background-size: 50%;
 }
 
 button:hover{
-	background-color: alpha(@secondary, 0.3);
+	background-color: alpha(@tertiary, 0.6);
 	outline-style: none;
 	background-size: 40%;
 }

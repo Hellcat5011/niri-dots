@@ -1,0 +1,140 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: MartianMono Nerd Font, Dejavu Sans, AdwaitaMono Nerd Font;
+    font-size: 15px;
+    color: @on_primary_container;
+    min-height: 10px;
+    }
+
+  @import '../colors.css';
+
+window#waybar {
+    background: linear-gradient(to bottom, @primary_container 10%, transparent 100%);
+    padding: 10px 0;
+    margin: 10px 0;
+}
+
+tooltip {
+  background: rgba(34, 37, 41, 0.5);
+  border: 1px solid @tertiary_fixed_dim;
+  border-radius: 10px;
+}
+tooltip label {
+  color: white;
+}
+
+
+
+/***** LEFT MODULES *****/
+
+.modules-left {
+	background: linear-gradient(to left, transparent, alpha(@secondary, 0.8));
+	padding: 2px 15px;
+}
+
+#workspaces.horizontal.module {
+  background: transparent;
+  padding: 3px;
+  border: 3px solid @tertiary;
+  border-radius: 30px;
+}
+
+
+#workspaces.horizontal.module button {
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	border-radius: 30px;
+	background: linear-gradient(to bottom, @tertiary, transparent);
+}
+
+#workspaces.horizontal.module button:hover {
+    background: alpha(@secondary, 0.5);
+    border-radius: 30px;
+}
+
+#workspaces.horizontal.module button.active {
+    background: linear-gradient(to bottom, @tertiary 40%, transparent 100%); 
+}
+
+
+/***** CENTER MODULES *****/
+
+.modules-center {
+  padding: 2px 40px;
+  margin: 0px 10px 0px 10px;
+  background: transparent;
+  border: 0px;
+  border-radius: 0;
+}
+
+#window.horizontal.module {
+}
+
+#window label {
+	font-size: 14px;
+	color: @inverse_surface;
+}
+
+window#waybar.empty #window {
+	border: 0px;
+	background: transparent;
+}
+
+#clock.module {
+  padding: 0px 10px;
+  margin: 0px 10px;
+  background: transparent;
+  font-size: 18px;
+}
+
+#custom-notify.module {
+  padding: 0px 10px;
+  background: transparent;
+  font-size:16px;
+}
+
+#custom-notify.module:hover {
+  background: @secondary;
+  color: @on_secondary;
+  font-size: 18px;
+  border-radius: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+
+/***** MODULES RIGHT *****/
+
+.modules-right {
+  background: transparent;
+  border: 0px;
+  padding: 2px 15px;
+  background: linear-gradient(to right, transparent, alpha(@tertiary, 0.8));
+}
+
+
+#bluetooth.module, #wireplumber.module, #custom-brightness, #tray {
+    padding: 0px 15px;
+    font-size: 16px;
+}
+
+#network.module {
+    padding: 0px 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    }
+
+
+#network.module:hover, #wireplumber.module:hover, #bluetooth:hover, #custom-brightness:hover {
+    background: linear-gradient(to bottom, @secondary, transparent);
+    color: inherit;
+    font-size: 18px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#bluetooth.connected, #wireplumber.muted {
+	background: linear-gradient(to bottom, transparent 30%, @secondary 100%);
+}

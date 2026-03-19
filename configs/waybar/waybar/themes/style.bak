@@ -1,0 +1,185 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: MartianMono Nerd Font, Dejavu Sans, AdwaitaMono Nerd Font;
+    font-size: 15px;
+    color: @on_primary_container;
+    min-height: 10px;
+    }
+
+  @import 'colors.css';
+
+window#waybar {
+    background: transparent;
+    padding: 10px 0;
+}
+
+tooltip {
+  background: rgba(34, 37, 41, 0.5);
+  border: 1px solid @tertiary_fixed_dim;
+  border-radius: 10px;
+}
+tooltip label {
+  color: white;
+}
+
+/***** LEFT MODULES *****/
+
+#workspaces.horizontal.module {
+  background: alpha(@inverse_primary, 0.6);
+  border-radius: 30px 30px 30px 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  border: 2px solid @secondary;
+}
+
+
+#workspaces button {
+    background: alpha(@secondary, 0.6);
+    color: black;
+    border-radius: 15px 15px 15px 15px;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+#workspaces button:first-child {
+    margin-left: 5px;
+}
+
+#workspaces button:last-child {
+    margin-right: 5px;
+}
+
+#workspaces button:hover {
+    background: alpha(@tertiary_fixed_dim, 0.9);
+    font-size: 25px;
+    border-radius: 15px 15px 15px 15px;
+}
+
+#workspaces button.active {
+    background: @tertiary;
+}
+
+
+/***** CENTER MODULES *****/
+
+.modules-center {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 0px;
+  background: transparent;
+}
+
+#window {
+  margin-right: 10px;
+  padding: 0px 8px;
+  border: 2px solid @secondary;
+  border-radius: 30px;
+  background: alpha(@inverse_primary, 0.6);
+}
+
+#window label {
+  font-size: 14px;
+  color: @inverse_surface;
+}
+
+window#waybar.empty #window{
+  background: transparent;
+  border: none;
+}
+
+#clock.module {
+  margin-right: 10px;
+  padding: 0px 8px;
+  border-radius: 30px;
+  border: 2px solid @secondary;
+  background: alpha(@inverse_primary, 0.6);
+  font-size: 16px;
+  color: @inverse_surface;
+}
+
+#custom-notify.module {
+  padding: 0px 10px;
+  border: 2px solid @secondary;
+  border-radius: 30px;
+  background: alpha(@inverse_primary, 0.6);
+  font-size:16px;
+  color: @inverse_surface;
+}
+
+#custom-notify.module:hover {
+  background: alpha(@tertiary, 0.6);
+  color: alpha(@surface, 0.6);
+  font-size: 18px;
+  border-radius: 30px;
+  padding: 0px 10px;
+  
+}
+
+
+/***** MODULES RIGHT *****/
+
+.modules-right {
+  background: transparent;
+  padding: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.modules-right:last-child {
+  margin-right: 10px;
+}
+
+
+#bluetooth.disabled, #wireplumber.module, #custom-brightness, #network.module, #custom-expand-icon {
+    padding: 0px 10px;
+    font-size: 16;
+    background: alpha(@inverse_primary, 0.6);
+    color: @inverse_surface;
+    border: 2px solid @secondary;
+    border-radius: 15px;
+    margin-right: 3px;
+}
+
+#wireplumber.muted {
+    padding: 0px 10px;
+    font-size: 16;
+    background: alpha(@tertiary, 0.6);
+    color: @primary_container;
+    border: 2px solid @secondary;
+    border-radius: 15px;
+    margin-right: 3px;
+}
+
+#bluetooth.connected {
+    padding: 0px 10px;
+    font-size: 16;
+    background: alpha(@tertiary, 0.6);
+    color: @primary_container;
+    border: 2px solid @secondary;
+    border-radius: 15px;
+    margin-right: 3px;   
+}
+
+#bluetooth.on, #tray {
+    padding: 0px 10px;
+    font-size: 16px;
+    background: alpha(@secondary, 0.6);
+    color: @primary_container;
+    border: 2px solid @secondary;
+    border-radius: 15px;
+    margin-right: 3px;
+}
+
+
+#wireplumber.module:hover, #bluetooth:hover, #custom-brightness:hover, #network.module:hover, #custom-expand-icon:hover {
+  background: alpha(@tertiary, 0.6);
+  color: alpha(@surface, 0.6);
+  border-radius: 15px;
+  font-size: 18px;
+  padding: 0px 10px;
+}

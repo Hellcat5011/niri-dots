@@ -27,6 +27,7 @@ sudo cp ./sddm.conf /etc/sddm.conf
 
 sleep 2
 
+sudo systemctl enable sddm
 sudo systemctl enable NetworkManager
 sudo systemctl enable blueman
 

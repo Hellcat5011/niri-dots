@@ -31,6 +31,8 @@ mkdir -p $HOME/.local/share/fonts
 cp ./FastHand-lgBMV.ttf $HOME/.local/share/fonts/
 fc-cache -f -v
 
+sudo chsh /bin/fish $USER
+
 sudo systemctl enable sddm
 sudo systemctl enable NetworkManager
 sudo systemctl enable blueman

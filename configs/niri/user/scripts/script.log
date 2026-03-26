@@ -1,0 +1,26 @@
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+./wallpaper.sh: line 19: -f2: command not found
+./wallpaper.sh: line 20: bc: command not found
+xkbcommon: ERROR: [XKB-679] No Compose file for locale "en_IN.ISO8859-1": locale is either invalid or not installed
+xkbcommon: ERROR: [XKB-679] couldn't find a Compose file for locale "en_IN" (mapped to "en_IN.ISO8859-1")
+2026-03-06 01:41:05 - [swaybg-1.2.2/main.c:332] Found config * for output DP-2 ((null))
+** Message: 01:41:06.200: Connecting to org.freedesktop.Tracker3.Miner.Files
+nautilus-application-Message: 01:41:06.201: Failed to initialize display server connection: GDBus.Error:org.freedesktop.DBus.Error.InvalidArgs: Invalid service client type
+
+(org.gnome.Nautilus:23288): Adwaita-WARNING **: 01:41:06.248: Using GtkSettings:gtk-application-prefer-dark-theme with libadwaita is unsupported. Please use AdwStyleManager:color-scheme instead.
+[31m✖[0m Failed executing command: "gsettings set org.gnome.desktop.interface gtk-theme \"\"; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark && nautilus -q"
+cp: cannot stat '/home/vic/.config/niri/user/scripts/wallpaper.sh/.wallpaper_current': Not a directory
+./wallpaper.sh: line 55: /home/vic/.config/niri/user/scripts/wallpaper.sh/wob.sh: Not a directory
+Starting SwayNotificationCenter version swaync 0.12.4
+** Message: 01:41:08.533: configModel.vala:513: Loading Config: "/home/vic/.config/swaync/config.json"
+
+(process:23371): Adwaita-WARNING **: 01:41:08.562: Using GtkSettings:gtk-application-prefer-dark-theme with libadwaita is unsupported. Please use AdwStyleManager:color-scheme instead.
+** Message: 01:41:08.620: functions.vala:104: Loading CSS: "/etc/xdg/swaync/style.css"
+** Message: 01:41:08.621: functions.vala:117: Loading CSS: "/home/vic/.config/swaync/style.css"
+** Message: 01:41:08.624: factory.vala:55: Loading widget: inhibitors
+** Message: 01:41:08.624: factory.vala:55: Loading widget: title
+** Message: 01:41:08.624: factory.vala:55: Loading widget: dnd
+** Message: 01:41:08.625: factory.vala:55: Loading widget: mpris
+** Message: 01:41:08.625: factory.vala:17: Loading widget: widget-notifications
+Terminated                 swaync

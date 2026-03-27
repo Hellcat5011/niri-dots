@@ -1,12 +1,9 @@
 adw-gtk-theme
-amd-ucode
 ani-cli
 ani-skip-git
-ark
 awesome-terminal-fonts
 awww
 blueman
-blueprint-compiler
 bluez-utils
 btop
 cava
@@ -16,7 +13,7 @@ dunst
 eza
 fastfetch
 fish
-flatpak
+file-roller
 font-manager
 gnome-calculator
 htop
@@ -24,7 +21,6 @@ kate
 lib32-rust-libs
 libva-nvidia-driver
 loupe
-matugen-git
 meson
 mpv-mpris
 nano
@@ -32,7 +28,7 @@ neovim
 networkmanager
 network-manager-applet
 niri-wip-git
-noctilia-shell
+noctalia-shell
 nwg-look
 okular
 pavucontrol

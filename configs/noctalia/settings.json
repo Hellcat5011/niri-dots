@@ -6,15 +6,15 @@
         "clipboardWrapText": true,
         "customLaunchPrefix": "",
         "customLaunchPrefixEnabled": false,
-        "density": "default",
+        "density": "comfortable",
         "enableClipPreview": true,
         "enableClipboardChips": true,
-        "enableClipboardHistory": false,
+        "enableClipboardHistory": true,
         "enableClipboardSmartIcons": true,
         "enableSessionSearch": true,
         "enableSettingsSearch": true,
         "enableWindowsSearch": true,
-        "iconMode": "tabler",
+        "iconMode": "native",
         "ignoreMouseInput": false,
         "overviewLayer": false,
         "pinnedApps": [
@@ -23,7 +23,7 @@
         "screenshotAnnotationTool": "",
         "showCategories": true,
         "showIconBackground": false,
-        "sortByMostUsed": true,
+        "sortByMostUsed": false,
         "terminalCommand": "alacritty -e",
         "viewMode": "list"
     },
@@ -45,14 +45,14 @@
         "backgroundOpacity": 0.72,
         "barType": "framed",
         "capsuleColorKey": "primary",
-        "capsuleOpacity": 0.2,
+        "capsuleOpacity": 0.15,
         "contentPadding": 10,
         "density": "default",
         "displayMode": "always_visible",
         "enableExclusionZoneInset": true,
-        "fontScale": 1.25,
+        "fontScale": 1.5,
         "frameRadius": 12,
-        "frameThickness": 8,
+        "frameThickness": 7,
         "hideOnOverview": true,
         "marginHorizontal": 4,
         "marginVertical": 4,
@@ -64,7 +64,7 @@
         "mouseWheelAction": "none",
         "mouseWheelWrap": true,
         "outerCorners": true,
-        "position": "top",
+        "position": "left",
         "reverseScroll": false,
         "rightClickAction": "controlCenter",
         "rightClickCommand": "",
@@ -75,7 +75,7 @@
         "showOnWorkspaceSwitch": true,
         "showOutline": false,
         "useSeparateOpacity": false,
-        "widgetSpacing": 13,
+        "widgetSpacing": 15,
         "widgets": {
             "center": [
                 {
@@ -119,15 +119,6 @@
                     "useDistroLogo": false
                 },
                 {
-                    "clockColor": "none",
-                    "customFont": "",
-                    "formatHorizontal": "h:mm ap,  ddd,  MMM d",
-                    "formatVertical": "HH mm - dd MM",
-                    "id": "Clock",
-                    "tooltipFormat": "HH:mm ddd, MMM dd",
-                    "useCustomFont": false
-                },
-                {
                     "colorizeIcons": false,
                     "hideMode": "hidden",
                     "id": "ActiveWindow",
@@ -138,46 +129,32 @@
                     "useFixedWidth": false
                 },
                 {
-                    "compactMode": false,
-                    "hideMode": "hidden",
-                    "hideWhenIdle": false,
-                    "id": "MediaMini",
-                    "maxWidth": 145,
-                    "panelShowAlbumArt": true,
-                    "scrollingMode": "hover",
-                    "showAlbumArt": true,
-                    "showArtistFirst": true,
-                    "showProgressRing": true,
-                    "showVisualizer": false,
-                    "textColor": "none",
-                    "useFixedWidth": false,
-                    "visualizerType": "linear"
+                    "iconColor": "none",
+                    "id": "Settings"
                 }
             ],
             "right": [
                 {
                     "blacklist": [
+                        "nm-applet"
                     ],
                     "chevronColor": "none",
-                    "colorizeIcons": false,
-                    "drawerEnabled": true,
-                    "hidePassive": false,
+                    "colorizeIcons": true,
+                    "drawerEnabled": false,
+                    "hidePassive": true,
                     "id": "Tray",
                     "pinned": [
                     ]
                 },
                 {
-                    "deviceNativePath": "__default__",
-                    "displayMode": "graphic-clean",
-                    "hideIfIdle": false,
-                    "hideIfNotDetected": true,
-                    "id": "Battery",
-                    "showNoctaliaPerformance": false,
-                    "showPowerProfiles": false
+                    "displayMode": "onhover",
+                    "iconColor": "tertiary",
+                    "id": "Bluetooth",
+                    "textColor": "primary"
                 },
                 {
                     "displayMode": "onhover",
-                    "iconColor": "none",
+                    "iconColor": "tertiary",
                     "id": "Volume",
                     "middleClickCommand": "pwvucontrol || pavucontrol",
                     "textColor": "none"
@@ -185,18 +162,9 @@
                 {
                     "applyToAllMonitors": false,
                     "displayMode": "onhover",
-                    "iconColor": "none",
+                    "iconColor": "tertiary",
                     "id": "Brightness",
-                    "textColor": "none"
-                },
-                {
-                    "colorizeDistroLogo": false,
-                    "colorizeSystemIcon": "none",
-                    "customIconPath": "",
-                    "enableColorization": false,
-                    "icon": "noctalia",
-                    "id": "ControlCenter",
-                    "useDistroLogo": false
+                    "textColor": "primary"
                 },
                 {
                     "iconColor": "error",
@@ -290,19 +258,50 @@
         }
     },
     "desktopWidgets": {
-        "enabled": false,
+        "enabled": true,
         "gridSnap": false,
         "gridSnapScale": false,
         "monitorWidgets": [
+            {
+                "name": "DP-2",
+                "widgets": [
+                    {
+                        "clockColor": "tertiary",
+                        "clockStyle": "minimal",
+                        "customFont": "icomoon",
+                        "format": "hh:mm ap\\nd MMMM yyyy",
+                        "id": "Clock",
+                        "roundedCorners": true,
+                        "scale": 2.4000714267493644,
+                        "showBackground": true,
+                        "useCustomFont": false,
+                        "x": 2209,
+                        "y": 1253
+                    },
+                    {
+                        "hideMode": "hidden",
+                        "id": "MediaPlayer",
+                        "roundedCorners": true,
+                        "scale": 1,
+                        "showAlbumArt": true,
+                        "showBackground": true,
+                        "showButtons": true,
+                        "showVisualizer": true,
+                        "visualizerType": "wave",
+                        "x": 2152,
+                        "y": 13
+                    }
+                ]
+            }
         ],
         "overviewEnabled": true
     },
     "dock": {
         "animationSpeed": 1,
-        "backgroundOpacity": 1,
+        "backgroundOpacity": 0.48,
         "colorizeIcons": false,
         "deadOpacity": 0.6,
-        "displayMode": "auto_hide",
+        "displayMode": "always_visible",
         "dockType": "floating",
         "enabled": false,
         "floatingRatio": 1,
@@ -341,7 +340,7 @@
         "clockFormat": "h\\nmm\\nap",
         "clockStyle": "custom",
         "compactLockScreen": false,
-        "dimmerOpacity": 0.1,
+        "dimmerOpacity": 0.25,
         "enableBlurBehind": true,
         "enableLockScreenCountdown": false,
         "enableLockScreenMediaControls": true,
@@ -397,14 +396,14 @@
     "hooks": {
         "colorGeneration": "",
         "darkModeChange": "",
-        "enabled": false,
+        "enabled": true,
         "performanceModeDisabled": "",
         "performanceModeEnabled": "",
         "screenLock": "",
         "screenUnlock": "",
         "session": "",
         "startup": "",
-        "wallpaperChange": ""
+        "wallpaperChange": "alacritty --title sddm -e /home/vic/.config/niri/user/scripts/sddm.sh"
     },
     "idle": {
         "customCommands": "[]",
@@ -416,7 +415,7 @@
         "resumeScreenOffCommand": "",
         "resumeSuspendCommand": "",
         "screenOffCommand": "",
-        "screenOffTimeout": 600,
+        "screenOffTimeout": 0,
         "suspendCommand": "",
         "suspendTimeout": 0
     },
@@ -448,11 +447,11 @@
     "nightLight": {
         "autoSchedule": true,
         "dayTemp": "6500",
-        "enabled": false,
+        "enabled": true,
         "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
-        "nightTemp": "4000"
+        "nightTemp": "4502"
     },
     "noctaliaPerformance": {
         "disableDesktopWidgets": true,
@@ -468,7 +467,7 @@
         "enableMarkdown": false,
         "enableMediaToast": true,
         "enabled": true,
-        "location": "top_right",
+        "location": "top",
         "lowUrgencyDuration": 3,
         "monitors": [
         ],
@@ -499,7 +498,7 @@
             1,
             2
         ],
-        "location": "top_right",
+        "location": "bottom_left",
         "monitors": [
         ],
         "overlayLayer": true
@@ -623,11 +622,19 @@
             },
             {
                 "enabled": true,
-                "id": "steam"
+                "id": "zenBrowser"
             },
             {
                 "enabled": true,
-                "id": "zenBrowser"
+                "id": "pywalfox"
+            },
+            {
+                "enabled": true,
+                "id": "kcolorscheme"
+            },
+            {
+                "enabled": true,
+                "id": "btop"
             }
         ],
         "enableUserTheming": false
@@ -638,7 +645,7 @@
         "fontDefaultScale": 1,
         "fontFixed": "CaskaydiaCove Nerd Font Mono",
         "fontFixedScale": 1,
-        "panelBackgroundOpacity": 0.93,
+        "panelBackgroundOpacity": 0.7000000000000001,
         "panelsAttachedToBar": true,
         "scrollbarAlwaysVisible": false,
         "settingsPanelMode": "attached",

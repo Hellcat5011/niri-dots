@@ -23,6 +23,6 @@ focus-follows-mouse max-scroll-amount="0%"
 }
 
 cursor {
-	xcursor-theme "Moga-Candy-Blue"
+	xcursor-theme "Moga-Candy-Olieve"
 	xcursor-size 36
 }

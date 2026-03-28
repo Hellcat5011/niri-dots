@@ -119,7 +119,11 @@
                     "useDistroLogo": false
                 },
                 {
-                    "colorizeIcons": false,
+                    "iconColor": "none",
+                    "id": "Settings"
+                },
+                {
+                    "colorizeIcons": true,
                     "hideMode": "hidden",
                     "id": "ActiveWindow",
                     "maxWidth": 145,
@@ -127,10 +131,6 @@
                     "showIcon": true,
                     "textColor": "none",
                     "useFixedWidth": false
-                },
-                {
-                    "iconColor": "none",
-                    "id": "Settings"
                 }
             ],
             "right": [
@@ -560,8 +560,8 @@
                 "action": "rebootToUefi",
                 "command": "",
                 "countdownEnabled": true,
-                "enabled": true,
-                "keybind": "5"
+                "enabled": false,
+                "keybind": ""
             },
             {
                 "action": "userspaceReboot",
@@ -645,7 +645,7 @@
         "fontDefaultScale": 1,
         "fontFixed": "CaskaydiaCove Nerd Font Mono",
         "fontFixedScale": 1,
-        "panelBackgroundOpacity": 0.7000000000000001,
+        "panelBackgroundOpacity": 0.5,
         "panelsAttachedToBar": true,
         "scrollbarAlwaysVisible": false,
         "settingsPanelMode": "attached",

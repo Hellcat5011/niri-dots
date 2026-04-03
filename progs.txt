@@ -1,8 +1,8 @@
 adw-gtk-theme
+alacritty
 ani-cli
 ani-skip-git
 awesome-terminal-fonts
-awww
 blueman
 bluez-utils
 btop
@@ -29,16 +29,10 @@ networkmanager
 network-manager-applet
 niri-wip-git
 noctalia-shell
-nwg-look
 okular
 pavucontrol
 polkit-kde-agent
-python-argcomplete
-python-build
-python-installer
 python-pywalfox
-python-setuptools-reproducible
-python-setuptools-scm
 qt6-wayland
 qt6ct-kde
 scdoc

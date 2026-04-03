@@ -36,6 +36,9 @@ fc-cache -f -v
 echo "Installing Nvidia drivers"
 sudo pacman -S linux-headers nvidia-dkms nvidia-utils nvidia-settings
 
+sudo cp ./environment /etc/environment
+sudo cp ./nvidia.conf /etc/modprobe.d/nvidia.conf
+
 sudo systemctl enable sddm
 sudo systemctl enable NetworkManager
 

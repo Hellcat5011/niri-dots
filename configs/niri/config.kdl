@@ -21,3 +21,4 @@ debug {
 
 include "./noctalia.kdl"
 
+include "./animations/swipe-window.kdl"

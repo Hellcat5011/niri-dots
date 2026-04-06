@@ -1,17 +1,9 @@
 window-rule {
-    // This regular expression is intentionally made as specific as possible,
-    // since this is the default config, and we want no false positives.
-    // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
-}
-
-window-rule {
     match app-id=r#"zen$"# title="^Picture-in-Picture$"
     open-floating true
 }
 
-
+// Global settings
 window-rule {
 	match {}
 	opacity 0.8
@@ -22,14 +14,19 @@ window-rule {
 }
 
 window-rule {
-	match app-id=r#"^Alacritty$"#
-	opacity 0.8
-
-	background-effect {
-		blur true
-	}
+    geometry-corner-radius 12
+    clip-to-geometry true
+    draw-border-with-background false
 }
 
+// Full opaque - Multimedia
+window-rule {
+	match app-id=r#"^org.gnome.[Ll]oupe$"#
+	match app-id=r#"^[Mm]pv$"#
+	opacity 1.0
+}
+
+// SDDM and wallpaper
 window-rule {
 	match app-id=r#"^Alacritty$"# title="^sddm$"
 
@@ -41,12 +38,7 @@ window-rule {
 	}
 }
 
-// (This example rule is commented out with a "/-" in front.)
-window-rule {
-    geometry-corner-radius 12
-    clip-to-geometry true
-    draw-border-with-background false
-}
+// Layer Rules
 
 layer-rule {
   match namespace="^noctalia-overview*"

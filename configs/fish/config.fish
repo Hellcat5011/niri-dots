@@ -5,19 +5,21 @@ if status is-interactive
     fastfetch
 end
 
-abbr in 'sudo pacman -S'
-abbr pin 'paru -S'
-abbr ss 'sudo pacman -Ss'
-abbr sp 'paru -Ss'
-abbr update 'sudo pacman -Syyu'
-abbr remove 'sudo pacman -Rns'
+alias in="sudo pacman -S"
+alias pin="paru -S"
+alias ss="sudo pacman -Ss"
+alias sp="paru -Ss"
+alias update="sudo pacman -Syyu"
+alias remove="sudo pacman -Rns"
 
-abbr ls 'eza --icons --color=always'
-abbr ll 'eza -al --icons --color=always'
-#abbr la 'eza -al --icons --color=always'
+alias ls="eza --icons --color=always"
+alias ll="eza -al --icons --color=always"
+#alias la "eza -al --icons --color=always"
 
-#hyprland-specific
-abbr nir 'cd ~/.config/niri'
-abbr usr 'cd ~/.config/niri/user/'
-abbr way 'cd ~/.config/waybar/'
-abbr rof 'cd ~/.config/rofi/themes/'
+#niri-specific
+alias nir="cd ~/.config/niri"
+alias usr="cd ~/.config/niri/user/"
+alias way="cd ~/.config/waybar/"
+alias rof="cd ~/.config/rofi/themes/"
+
+alias gdu="gdu --no-delete"

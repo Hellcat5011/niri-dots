@@ -30,7 +30,7 @@
     "audio": {
         "mprisBlacklist": [
         ],
-        "preferredPlayer": "",
+        "preferredPlayer": "mpv",
         "spectrumFrameRate": 30,
         "spectrumMirrored": true,
         "visualizerType": "linear",
@@ -111,6 +111,7 @@
             "left": [
                 {
                     "colorizeSystemIcon": "none",
+                    "colorizeSystemText": "none",
                     "customIconPath": "",
                     "enableColorization": false,
                     "icon": "rocket",
@@ -129,6 +130,7 @@
                     "maxWidth": 145,
                     "scrollingMode": "hover",
                     "showIcon": true,
+                    "showText": true,
                     "textColor": "none",
                     "useFixedWidth": false
                 }
@@ -145,6 +147,15 @@
                     "id": "Tray",
                     "pinned": [
                     ]
+                },
+                {
+                    "defaultSettings": {
+                        "enableTodoIntegration": false,
+                        "notecardsEnabled": true,
+                        "pincardsEnabled": true,
+                        "showCloseButton": true
+                    },
+                    "id": "plugin:clipper"
                 },
                 {
                     "displayMode": "onhover",
@@ -204,6 +215,7 @@
         "monitorForColors": "",
         "predefinedScheme": "Noctalia (default)",
         "schedulingMode": "off",
+        "syncGsettings": true,
         "useWallpaperColors": true
     },
     "controlCenter": {
@@ -266,17 +278,17 @@
                 "name": "DP-2",
                 "widgets": [
                     {
-                        "clockColor": "tertiary",
+                        "clockColor": "primary",
                         "clockStyle": "minimal",
-                        "customFont": "icomoon",
+                        "customFont": "FreeMono",
                         "format": "hh:mm ap\\nd MMMM yyyy",
                         "id": "Clock",
                         "roundedCorners": true,
                         "scale": 2.4000714267493644,
                         "showBackground": true,
-                        "useCustomFont": false,
-                        "x": 2209,
-                        "y": 1253
+                        "useCustomFont": true,
+                        "x": 2207,
+                        "y": 1269
                     },
                     {
                         "hideMode": "hidden",
@@ -290,6 +302,14 @@
                         "visualizerType": "wave",
                         "x": 2152,
                         "y": 13
+                    },
+                    {
+                        "id": "Weather",
+                        "roundedCorners": true,
+                        "scale": 1.1744196726926817,
+                        "showBackground": true,
+                        "x": 2218,
+                        "y": 1133
                     }
                 ]
             }
@@ -378,7 +398,7 @@
         "lockScreenCountdownDuration": 10000,
         "lockScreenMonitors": [
         ],
-        "lockScreenTint": 0.15,
+        "lockScreenTint": 0.2,
         "passwordChars": true,
         "radiusRatio": 1,
         "reverseScroll": false,
@@ -391,6 +411,7 @@
         "showHibernateOnLockScreen": false,
         "showScreenCorners": false,
         "showSessionButtonsOnLockScreen": true,
+        "smoothScrollEnabled": true,
         "telemetryEnabled": false
     },
     "hooks": {
@@ -403,14 +424,14 @@
         "screenUnlock": "",
         "session": "",
         "startup": "",
-        "wallpaperChange": "alacritty --title sddm -e /home/vic/.config/niri/user/scripts/sddm.sh"
+        "wallpaperChange": "python3 ~/.cache/wal/helium.py && alacritty --title sddm -e /home/vic/.config/niri/user/scripts/sddm.sh"
     },
     "idle": {
         "customCommands": "[]",
         "enabled": true,
         "fadeDuration": 5,
         "lockCommand": "",
-        "lockTimeout": 660,
+        "lockTimeout": 600,
         "resumeLockCommand": "",
         "resumeScreenOffCommand": "",
         "resumeSuspendCommand": "",
@@ -421,23 +442,24 @@
     },
     "location": {
         "analogClockInCalendar": false,
+        "autoLocate": true,
         "firstDayOfWeek": -1,
         "hideWeatherCityName": false,
         "hideWeatherTimezone": false,
-        "name": "bengaluru",
+        "name": "Bengaluru",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
         "showWeekNumberInCalendar": false,
         "use12hourFormat": true,
         "useFahrenheit": false,
         "weatherEnabled": true,
-        "weatherShowEffects": true
+        "weatherShowEffects": true,
+        "weatherTaliaMascotAlways": false
     },
     "network": {
-        "airplaneModeEnabled": false,
         "bluetoothAutoConnect": true,
         "bluetoothDetailsViewMode": "grid",
-        "bluetoothHideUnnamedDevices": false,
+        "bluetoothHideUnnamedDevices": true,
         "bluetoothRssiPollIntervalMs": 60000,
         "bluetoothRssiPollingEnabled": false,
         "disableDiscoverability": false,
@@ -504,7 +526,7 @@
         "overlayLayer": true
     },
     "plugins": {
-        "autoUpdate": false,
+        "autoUpdate": true,
         "notifyUpdates": true
     },
     "sessionMenu": {
@@ -622,10 +644,6 @@
             },
             {
                 "enabled": true,
-                "id": "zenBrowser"
-            },
-            {
-                "enabled": true,
                 "id": "pywalfox"
             },
             {
@@ -635,6 +653,10 @@
             {
                 "enabled": true,
                 "id": "btop"
+            },
+            {
+                "enabled": true,
+                "id": "foot"
             }
         ],
         "enableUserTheming": false
@@ -663,6 +685,7 @@
         "fillColor": "#000000",
         "fillMode": "crop",
         "hideWallpaperFilenames": false,
+        "linkLightAndDarkWallpapers": true,
         "monitorDirectories": [
             {
                 "directory": "/mnt/hdd/Wallpapers/walls",
@@ -684,9 +707,6 @@
         "transitionEdgeSmoothness": 0.05,
         "transitionType": [
             "fade",
-            "disc",
-            "stripes",
-            "wipe",
             "pixelate",
             "honeycomb"
         ],

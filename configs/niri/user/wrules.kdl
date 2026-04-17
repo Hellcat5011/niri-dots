@@ -44,3 +44,41 @@ layer-rule {
   match namespace="^noctalia-overview*"
   place-within-backdrop true
 }
+
+layout {
+	always-center-single-column
+}
+
+
+
+/* Workspaces
+workspace "terminal" {
+	open-on-output "DP-2"
+}
+
+workspace "browser" {
+	open-on-output "DP-2"
+}
+
+workspace "games" {
+	open-on-output "DP-2"
+}
+
+window-rule {
+	match app-id=r#"^[Ss]team$"#
+	match app-id=r#"^net.lutris.[Ll]utris$"#
+	open-on-workspace "games"
+}
+
+window-rule {
+	match app-id=r#"^[Aa]lacritty$"#
+	match app-id=r#"^[Ff]oot$"#
+	open-on-workspace "terminal"
+}
+
+window-rule {
+	match app-id=r#"^[Zz]en$"#
+	match app-id=r#"^[Hh]elium$"#
+	open-on-workspace "browser"
+} */
+

@@ -16,6 +16,7 @@ foot
 gamescope
 gdu
 gnome-calculator
+helium-browser-bin
 heroic-games-launcher-bin
 htop
 kate
@@ -50,4 +51,3 @@ wireless_tools
 xorg-xinit
 xwayland-satellite
 zram-generator
-zen-browser-bin

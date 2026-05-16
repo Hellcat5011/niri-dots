@@ -18,6 +18,12 @@
         "ignoreMouseInput": false,
         "overviewLayer": false,
         "pinnedApps": [
+            "helium",
+            "steam",
+            "net.lutris.Lutris",
+            "heroic",
+            "org.gnome.Nautilus",
+            "foot"
         ],
         "position": "center",
         "screenshotAnnotationTool": "",
@@ -360,12 +366,12 @@
         "clockFormat": "h\\nmm\\nap",
         "clockStyle": "custom",
         "compactLockScreen": false,
-        "dimmerOpacity": 0.25,
+        "dimmerOpacity": 0.15,
         "enableBlurBehind": true,
         "enableLockScreenCountdown": false,
         "enableLockScreenMediaControls": true,
         "enableShadows": true,
-        "forceBlackScreenCorners": false,
+        "forceBlackScreenCorners": true,
         "iRadiusRatio": 1,
         "keybinds": {
             "keyDown": [
@@ -409,7 +415,7 @@
         "shadowOffsetY": 3,
         "showChangelogOnStartup": true,
         "showHibernateOnLockScreen": false,
-        "showScreenCorners": false,
+        "showScreenCorners": true,
         "showSessionButtonsOnLockScreen": true,
         "smoothScrollEnabled": true,
         "telemetryEnabled": false
@@ -424,7 +430,7 @@
         "screenUnlock": "",
         "session": "",
         "startup": "",
-        "wallpaperChange": "python3 ~/.cache/wal/helium.py && alacritty --title sddm -e /home/vic/.config/niri/user/scripts/sddm.sh"
+        "wallpaperChange": "python3 ~/.cache/wal/helium.py && foot -a wallpaper /home/vic/.config/niri/user/scripts/sddm.sh"
     },
     "idle": {
         "customCommands": "[]",
@@ -712,13 +718,13 @@
         ],
         "useOriginalImages": true,
         "useSolidColor": false,
-        "useWallhaven": false,
+        "useWallhaven": true,
         "viewMode": "recursive",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
-        "wallhavenQuery": "",
+        "wallhavenQuery": "anime",
         "wallhavenRatios": "",
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",

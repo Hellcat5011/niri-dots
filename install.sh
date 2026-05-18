@@ -31,6 +31,11 @@ mkdir -p $HOME/.local/share/fonts
 cp -r ./fonts/* $HOME/.local/share/fonts/
 fc-cache -f -v
 
+echo "Nvidia (y/n)"
+read chs
+
+if [[ "$chs" = [yY] ]]; then
+
 echo "Installing Nvidia drivers"
 sudo pacman -S linux-headers nvidia-dkms nvidia-utils nvidia-settings
 
@@ -38,8 +43,14 @@ sudo sed -i "s/^MODULES=(.*/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm
 
 sudo mkinitcpio -P
 
-sudo cp ./environment /etc/environment
 sudo cp ./nvidia.conf /etc/modprobe.d/nvidia.conf
+
+else
+	echo "skipping nvidia drivers and config"
+
+fi
+
+sudo cp ./environment /etc/environment
 
 sudo systemctl enable sddm
 sudo systemctl enable NetworkManager

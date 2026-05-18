@@ -30,7 +30,7 @@
         "showCategories": true,
         "showIconBackground": false,
         "sortByMostUsed": false,
-        "terminalCommand": "alacritty -e",
+        "terminalCommand": "foot",
         "viewMode": "list"
     },
     "audio": {
@@ -116,14 +116,19 @@
             ],
             "left": [
                 {
-                    "colorizeSystemIcon": "none",
-                    "colorizeSystemText": "none",
-                    "customIconPath": "",
-                    "enableColorization": false,
-                    "icon": "rocket",
+                    "capsLockIcon": "letter-c",
+                    "hideWhenOff": false,
+                    "id": "LockKeys",
+                    "numLockIcon": "letter-n",
+                    "scrollLockIcon": "letter-s",
+                    "showCapsLock": true,
+                    "showNumLock": true,
+                    "showScrollLock": true
+                },
+                {
                     "iconColor": "none",
-                    "id": "Launcher",
-                    "useDistroLogo": false
+                    "id": "KeepAwake",
+                    "textColor": "none"
                 },
                 {
                     "iconColor": "none",
@@ -215,7 +220,7 @@
     },
     "colorSchemes": {
         "darkMode": true,
-        "generationMethod": "tonal-spot",
+        "generationMethod": "fruit-salad",
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",

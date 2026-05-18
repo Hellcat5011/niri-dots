@@ -42,6 +42,7 @@ python-pywalfox
 python-setuptools-reproducible
 python-setuptools-scm
 qt6ct-kde
+signal-desktop
 scdoc
 scx-tools
 sddm-sugar-candy-git

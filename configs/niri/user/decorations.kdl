@@ -1,6 +1,6 @@
 layout {
     
-    gaps 6
+    gaps 4
 
     focus-ring {
         active-color "#bacf82"

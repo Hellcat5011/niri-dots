@@ -35,7 +35,7 @@ window-rule {
 
 // SDDM and wallpaper
 window-rule {
-	match app-id=r#"^Alacritty$"# title="^sddm$"
+	match app-id=r#"^[Ww]allpaper$"#
 
 	open-floating true
 	opacity 0.8

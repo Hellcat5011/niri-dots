@@ -56,7 +56,7 @@
         "density": "default",
         "displayMode": "always_visible",
         "enableExclusionZoneInset": true,
-        "fontScale": 1,
+        "fontScale": 1.5,
         "frameRadius": 12,
         "frameThickness": 7,
         "hideOnOverview": true,
@@ -81,7 +81,7 @@
         "showOnWorkspaceSwitch": true,
         "showOutline": false,
         "useSeparateOpacity": false,
-        "widgetSpacing": 15,
+        "widgetSpacing": 10,
         "widgets": {
             "center": [
                 {
@@ -220,7 +220,7 @@
     },
     "colorSchemes": {
         "darkMode": true,
-        "generationMethod": "fruit-salad",
+        "generationMethod": "vibrant",
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
@@ -289,19 +289,6 @@
                 "name": "DP-2",
                 "widgets": [
                     {
-                        "clockColor": "primary",
-                        "clockStyle": "minimal",
-                        "customFont": "FreeMono",
-                        "format": "hh:mm ap\\nd MMMM yyyy",
-                        "id": "Clock",
-                        "roundedCorners": true,
-                        "scale": 2.4000714267493644,
-                        "showBackground": true,
-                        "useCustomFont": true,
-                        "x": 2207,
-                        "y": 1269
-                    },
-                    {
                         "hideMode": "hidden",
                         "id": "MediaPlayer",
                         "roundedCorners": true,
@@ -317,10 +304,81 @@
                     {
                         "id": "Weather",
                         "roundedCorners": true,
-                        "scale": 1.1744196726926817,
+                        "scale": 1.2357022603955157,
                         "showBackground": true,
-                        "x": 2218,
-                        "y": 1133
+                        "x": 2215,
+                        "y": 952
+                    },
+                    {
+                        "defaultSettings": {
+                            "roundedCorners": true,
+                            "showBackground": true
+                        },
+                        "id": "plugin:calendar-widget",
+                        "scale": 1.268700576850888,
+                        "showBackground": true,
+                        "x": 2217,
+                        "y": 1072
+                    },
+                    {
+                        "backgroundOpacity": 0.8,
+                        "dateStyle": "bubble",
+                        "defaultSettings": {
+                            "backgroundOpacity": 1,
+                            "dateStyle": "bubble",
+                            "dialStyle": "dots",
+                            "hourHandStyle": "fill",
+                            "minuteHandStyle": "medium",
+                            "secondHandStyle": "dot",
+                            "showHourMarks": false,
+                            "showSeconds": true,
+                            "sides": 9
+                        },
+                        "dialStyle": "dots",
+                        "hourHandStyle": "fill",
+                        "id": "plugin:cookie-clock",
+                        "minuteHandStyle": "medium",
+                        "scale": 1.372409571424915,
+                        "secondHandStyle": "dot",
+                        "showBackground": true,
+                        "showHourMarks": false,
+                        "showSeconds": true,
+                        "sides": 9,
+                        "x": 129,
+                        "y": 96
+                    },
+                    {
+                        "barWidth": 0.6,
+                        "bloomIntensity": 0.5,
+                        "customPrimaryColor": "#6750a4",
+                        "customSecondaryColor": "#625b71",
+                        "defaultSettings": {
+                            "barWidth": 0.6,
+                            "bloomIntensity": 0.5,
+                            "customPrimaryColor": "#6750A4",
+                            "customSecondaryColor": "#625B71",
+                            "fadeWhenIdle": false,
+                            "innerDiameter": 0.7,
+                            "ringOpacity": 0.8,
+                            "rotationSpeed": 0.5,
+                            "sensitivity": 1.5,
+                            "useCustomColors": false,
+                            "visualizationMode": 3,
+                            "waveThickness": 1
+                        },
+                        "fadeWhenIdle": true,
+                        "id": "plugin:fancy-audiovisualizer",
+                        "innerDiameter": 0.7,
+                        "ringOpacity": 0.8,
+                        "rotationSpeed": 0.5,
+                        "scale": 2.6970562748477143,
+                        "sensitivity": 1.5,
+                        "showBackground": true,
+                        "useCustomColors": false,
+                        "visualizationMode": 0,
+                        "waveThickness": 1,
+                        "x": 880,
+                        "y": 316
                     }
                 ]
             }
@@ -435,11 +493,11 @@
         "screenUnlock": "",
         "session": "",
         "startup": "",
-        "wallpaperChange": "python3 ~/.cache/wal/helium.py && foot -a wallpaper /home/vic/.config/niri/user/scripts/sddm.sh"
+        "wallpaperChange": "python3 ~/.cache/wal/helium.py"
     },
     "idle": {
         "customCommands": "[]",
-        "enabled": true,
+        "enabled": false,
         "fadeDuration": 5,
         "lockCommand": "",
         "lockTimeout": 600,
@@ -670,7 +728,7 @@
                 "id": "foot"
             }
         ],
-        "enableUserTheming": false
+        "enableUserTheming": true
     },
     "ui": {
         "boxBorderEnabled": false,
@@ -723,13 +781,13 @@
         ],
         "useOriginalImages": true,
         "useSolidColor": false,
-        "useWallhaven": true,
+        "useWallhaven": false,
         "viewMode": "recursive",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
-        "wallhavenQuery": "anime",
+        "wallhavenQuery": "",
         "wallhavenRatios": "",
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",

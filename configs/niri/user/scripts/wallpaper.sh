@@ -1,13 +1,9 @@
 #!/bin/bash
 
 # setup
-terminal=alacritty
+terminal=foot
 walldir="/mnt/hdd/Wallpapers/walls/"
 scripts="$HOME/.config/niri/user/scripts/"
-
-# swww config
-BEZIER=".43,1.19,1,.4"
-AWWW_PARAMS="--transition-fps 60 --transition-type any --transition-duration 2 --transition-bezier $BEZIER"
 
 rofi_theme="~/.config/rofi/wallpaper.rasi"
 
@@ -40,13 +36,10 @@ menu() {
 
 apply_wallpaper() {
   local image_path="$1"
-  awww img "$image_path" $AWWW_PARAMS
-  matugen image "$image_path" -m "dark" -t "scheme-tonal-spot" --source-color-index "0"
   cp "$image_path" "$scripts/.wallpaper_current"
+  qs -c noctalia-shell ipc call wallpaper set $image_path
   sleep 2
-  killall swaync && swaync &
-  disown
-  alacritty --title sddm -e bash -c "$scripts/sddm.sh"
+  foot -a wallpaper "$scripts/sddm.sh"
 }
 
 # main

@@ -1,11 +1,12 @@
 layout {
     
-    gaps 4
+    gaps 3
 
     focus-ring {
         active-color "#bacf82"
         inactive-color "#909284"
         urgent-color   "#ffb4ab"
+	width 2
     }
 
     background-color "transparent"
@@ -15,6 +16,10 @@ layout {
         active-color   "#bacf82"
         inactive-color "#909284"
         urgent-color   "#ffb4ab"
+    }
+
+    struts {
+	    top 2
     }
 
     shadow {

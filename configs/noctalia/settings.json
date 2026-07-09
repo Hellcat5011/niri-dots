@@ -49,9 +49,9 @@
         "autoHideDelay": 500,
         "autoShowDelay": 150,
         "backgroundOpacity": 0.75,
-        "barType": "floating",
+        "barType": "simple",
         "capsuleColorKey": "primary",
-        "capsuleOpacity": 0.16,
+        "capsuleOpacity": 0.1,
         "contentPadding": 2,
         "density": "default",
         "displayMode": "always_visible",
@@ -70,7 +70,7 @@
         "mouseWheelAction": "none",
         "mouseWheelWrap": true,
         "outerCorners": true,
-        "position": "left",
+        "position": "top",
         "reverseScroll": false,
         "rightClickAction": "controlCenter",
         "rightClickCommand": "",
@@ -126,15 +126,6 @@
                     "showScrollLock": true
                 },
                 {
-                    "iconColor": "none",
-                    "id": "KeepAwake",
-                    "textColor": "none"
-                },
-                {
-                    "iconColor": "none",
-                    "id": "Settings"
-                },
-                {
                     "colorizeIcons": true,
                     "hideMode": "hidden",
                     "id": "ActiveWindow",
@@ -158,6 +149,11 @@
                     "id": "Tray",
                     "pinned": [
                     ]
+                },
+                {
+                    "iconColor": "none",
+                    "id": "KeepAwake",
+                    "textColor": "none"
                 },
                 {
                     "defaultSettings": {
@@ -220,7 +216,7 @@
     },
     "colorSchemes": {
         "darkMode": true,
-        "generationMethod": "vibrant",
+        "generationMethod": "fruit-salad",
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
@@ -298,8 +294,8 @@
                         "showButtons": true,
                         "showVisualizer": true,
                         "visualizerType": "wave",
-                        "x": 2152,
-                        "y": 13
+                        "x": 2156,
+                        "y": 38
                     },
                     {
                         "id": "Weather",
@@ -319,33 +315,6 @@
                         "showBackground": true,
                         "x": 2217,
                         "y": 1072
-                    },
-                    {
-                        "backgroundOpacity": 0.8,
-                        "dateStyle": "bubble",
-                        "defaultSettings": {
-                            "backgroundOpacity": 1,
-                            "dateStyle": "bubble",
-                            "dialStyle": "dots",
-                            "hourHandStyle": "fill",
-                            "minuteHandStyle": "medium",
-                            "secondHandStyle": "dot",
-                            "showHourMarks": false,
-                            "showSeconds": true,
-                            "sides": 9
-                        },
-                        "dialStyle": "dots",
-                        "hourHandStyle": "fill",
-                        "id": "plugin:cookie-clock",
-                        "minuteHandStyle": "medium",
-                        "scale": 1.372409571424915,
-                        "secondHandStyle": "dot",
-                        "showBackground": true,
-                        "showHourMarks": false,
-                        "showSeconds": true,
-                        "sides": 9,
-                        "x": 129,
-                        "y": 96
                     },
                     {
                         "barWidth": 0.6,
@@ -379,6 +348,19 @@
                         "waveThickness": 1,
                         "x": 880,
                         "y": 316
+                    },
+                    {
+                        "clockColor": "none",
+                        "clockStyle": "digital",
+                        "customFont": "",
+                        "format": "HH:mm\\nd MMMM yyyy",
+                        "id": "Clock",
+                        "roundedCorners": true,
+                        "scale": 1.8909545442950497,
+                        "showBackground": true,
+                        "useCustomFont": false,
+                        "x": 11,
+                        "y": 46
                     }
                 ]
             }
@@ -422,7 +404,7 @@
         "allowPanelsOnScreenWithoutBar": true,
         "allowPasswordWithFprintd": false,
         "animationDisabled": false,
-        "animationSpeed": 1,
+        "animationSpeed": 2,
         "autoStartAuth": false,
         "avatarImage": "/home/vic/.face",
         "boxRadiusRatio": 1,
@@ -435,7 +417,7 @@
         "enableLockScreenMediaControls": true,
         "enableShadows": true,
         "forceBlackScreenCorners": false,
-        "iRadiusRatio": 1,
+        "iRadiusRatio": 0.2,
         "keybinds": {
             "keyDown": [
                 "Down"
@@ -469,7 +451,7 @@
         ],
         "lockScreenTint": 0.2,
         "passwordChars": true,
-        "radiusRatio": 1,
+        "radiusRatio": 0.2,
         "reverseScroll": false,
         "scaleRatio": 1,
         "screenRadiusRatio": 1,
@@ -497,7 +479,7 @@
     },
     "idle": {
         "customCommands": "[]",
-        "enabled": false,
+        "enabled": true,
         "fadeDuration": 5,
         "lockCommand": "",
         "lockTimeout": 600,
@@ -582,14 +564,14 @@
     },
     "osd": {
         "autoHideMs": 2000,
-        "backgroundOpacity": 1,
+        "backgroundOpacity": 0.6,
         "enabled": true,
         "enabledTypes": [
             0,
             1,
             2
         ],
-        "location": "bottom_left",
+        "location": "top_right",
         "monitors": [
         ],
         "overlayLayer": true
@@ -728,7 +710,7 @@
                 "id": "foot"
             }
         ],
-        "enableUserTheming": true
+        "enableUserTheming": false
     },
     "ui": {
         "boxBorderEnabled": false,
@@ -746,7 +728,7 @@
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/mnt/hdd/Wallpapers/walls",
+        "directory": "/home/vic/Pictures/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
